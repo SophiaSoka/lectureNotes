@@ -27,32 +27,8 @@ Actual parameter = new_string = function(x, y);
 Stringstream class 
 Ios_base ← ios ← istream or ostream ←iostream ← stringstream 
 * Objects of the string stream class use a string buffer containing a sequence of characters. This buffer can be accessed directly as a string object
-* Use <sstream>
-* Example   
+* Use <sstream>   
         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
