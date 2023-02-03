@@ -1,0 +1,180 @@
+﻿1/23
+Definitions of key terms 
+Abstraction 
+* Focuses on what as opposed to how
+* Separate logical properties from implementations details 
+* Example: driving a car and not knowing how engine works 
+   * Driving = logical properties
+   * Construction of engine = implementations 
+Abstract Data Type (ADT) is a collection of data elements and the allowable operations on those elements; no implementations details (we have been using these when building classes, just didn't call it such) 
+Data Structure (DS)
+* An abstract representation of problem data for computational problem-solving 
+* In other words a way to store data (with view limitations than an array or arraylist)
+Example: ADT is Vehicle and the DS is car, train, bike etc. 
+            ADT is list and the DS is arraylist, linked list 
+Asymptotic Analysis - ??? (In reference to the second part of the course description)
+* How does an algorithm scale as data becomes really large?
+
+
+Streams <fstream>
+ifstream(input) 
+* ofstream(output)
+* fstream(both)
+Formal parameter = string function(int a, int b){ …}
+Actual parameter = new_string = function(x, y);
+
+
+Stringstream class 
+Ios_base ← ios ← istream or ostream ←iostream ← stringstream 
+* Objects of the string stream class use a string buffer containing a sequence of characters. This buffer can be accessed directly as a string object
+* Use <sstream>
+* Example   
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Structures 
+- collection of related data items, possibly of different types (like a simplified class) 
+- in c++ it is called a struct
+- a heterogeneous since it can contain data of different types 
+- everything in struct is public
+- you can have an array inside of a structure 
+- example 
+        Struct student  {
+                int year;
+                string name;
+                double gpa;  }
+main(){
+        Student new_student(1, sophia, 4.0) 
+}  - when initializing you must put parameters in a certain order 
+
+
+Command line arguments 
+   * Pass information via “command line arguments” 
+   * These argos are passed to main function
+   * The CMD shell program calls the main function of your program 
+   * Your execution of the program calls the main function to your program 
+   * Your execution of the program from the command line is actually calling main() function 
+   * ex) prog -v input.dat
+      ./a.out input.txt output.txt (...as many arguments as you want)
+   * The program receives two command line arguments: the string “-v”, the string “input.dat”, typically, the -in “-v” indicates an option 
+        
+   * Argc = argument count.argc = 1 if the user typed nothing after the program name (1 arg)
+   * Argv = argument vector. Not a real vector, but just a bunch of character pointers (behaves like an array of strings for the argument to give the program) 
+
+
+   * ex) int main(int argc, char* argv){ 
+
+
+Memory 
+- Stack vs Heap 
+- Static vs Dynamic Memory Allocation 
+Pointers 
+
+
+Stack memory - (RAM?)
+   * A stack frame is created when a function is called. Henceforth, all the local variables of the function are created within the confines of this stack frame
+   * When the function returns, its stack frame is “deleted”. The deletion of all variables happen “automatically”
+   * Big limitation, how to store variables that one can access across function 
+
+
+Pointers 
+   * Three data types in c++;
+   * Simple: ints, bool, float
+   * Structured: class, struct, enumeration
+   * Pointers 
+   * Pointers is a variable whose content is an address (of memory) 
+   * The value of a pointer variable is an address using the & symbol 
+Int a = 10;
+Cout << a << endl;
+Cout << a& << endl;
+   * & is called the address of operator and returns the address of its operand 
+   * * symbol is used to create a pointer variable and is the “dereferencing operator”
+Pointers can be used to point to structures 
+Int *p;
+Int sum = 10;
+p = &10;
+
+
+To create an empty pointer so p = nullptr; or p = NULL; or p = 0;
+
+
+HEAP 
+A region of your computer memory that is not managed automatically for you, and is not as tightly managed by the CPU. To allocate memory on the heap, you must use operator new, Once you have allocated memory on the leap, you are responsible for deleting it using delete operator to deallocate that memory once you don't need it any more. If you don't deallocate memory, your program will have what is known as a memory leak. That is, memory on the heap will still be set aside(and won't be available…)
+
+
+Int *pa = 0;
+Int n;
+cin >> n;
+Pa = new int[n];
+For (int i = 0; i < n; i++){
+        pa [i] = i;
+}
+Delete pa[];
+Pa = 0;
+
+
+Stack 
+   * Fast access
+   * Don't have explicitly free variables 
+   * Spaces is managed efficiently by CPU 
+   * Local variables only 
+   * Limit on stack 
+Heap - basically opposite of stack stuff 
+USE int *p = nullptr;
+NOT int *p;
+
+
+References 
+They Are less powerful than pointers, references in c++ cannot be used for implementing data structures like linked list, tree, etc. In Java, references don't have the above restrictions, and can be used to implement all data structures. References are more powerful in java which is main reason java doesn't need pointers 
+
+
+Alias 
+Int x = 25; //x has memory address of 1000
+Int &q = x;
+//&q = 1000       //&x = 1000       //q = 25        //x = 25
+
+
+Pass Pointer by Pointer - check photos and canvas with slides 
+
+
+Array doubling 
+Vectors can grow and shrink size
+Not same with arrays in c++
+
+
+Struct x {
+        String word;
+        Int count;
+}
+
+
+Int size = 100;
+X *array = new x[size];
+X *array2 = new x[size *2];
+For (loops through array){
+        Array2[i] = array[i];
+}
