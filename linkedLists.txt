@@ -1,0 +1,42 @@
+Linked list 
+
+singly linked list
+- each element, which is also called a node, contains the data stored in the node and a pointer to the node in the list 
+- Node is each part of the list, each node is attached to the next one 
+- Head is a pointer to the first element in the linked list 
+- each node has two parts, data and the pointer to next
+- list ends when the last node has a null pointer 
+
+doubly linked list 
+- each node has three properties: an integer key, a pointer to the next node in the lost, and a pointer to the previous node in the list 
+- 
+
+basic operations of linked lists
+- initialize the list 
+- determine weather the list is empty 
+- print the lost 
+- find the length of the list 
+- destroy the list 
+- retrieve the info contained in the first node
+- retrieve the info contained in th elast node 
+- search the list for a given item 
+- insert an item in the list 
+- delete an item from the list 
+- make a copy of LL
+
+basic functions 
+- prepend(value)    -> add a node in the beggining 
+- append(value)     -> add a node in the end
+- pop()             -> Remove a node from the end 
+- popFirst()        -> 
+- 
+
+
+example of linked list 
+       1800          2000          2200      <-adresses of the int object
+head(null, 2000) -> (9, 2200) -> (10, 2400)
+
+head                value = 2000
+head->data          value = 9 
+head->next.         value = 28000
+head->next->data    value = 10
