@@ -29,7 +29,7 @@ basic functions
 - append(value)     -> add a node in the end
 - pop()             -> Remove a node from the end 
 - popFirst()        -> 
-- 
+- traverse()        -> Loops through all the nodes 
 
 
 example of linked list 
@@ -40,3 +40,8 @@ head                value = 2000
 head->data          value = 9 
 head->next.         value = 28000
 head->next->data    value = 10
+
+Inserting a Node
+1.) At the front of the linked list 
+2.) After a given node 
+3.) At the end of the linked list 
